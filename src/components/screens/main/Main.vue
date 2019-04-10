@@ -1,35 +1,26 @@
 <template>
     <div>
-        <section class="briefing">
-            <v-layout align-center justify-center row fill-height>
-                <div class="briefing-text">
-                    <h3 class="display-3">Welcome to the site</h3>   
-                    <span class="subheading">Lorem ipsum dolor sit amet, pri veniam forensibus id. Vis maluisset molestiae id, ad semper lobortis cum. At impetus detraxit incorrupte usu, repudiare assueverit ex eum, ne nam essent vocent admodum.</span>
-
-                    <v-divider class="my-3"></v-divider>
-
-                    <div class="title mb-3">Check out our newest features!</div>                             
-                </div>
-            </v-layout>
-        </section>        
+        <section class="description">
+            <Description/>
+        </section>     
         <section class="carousel">
             <Carousel/>
-        </section>
+        </section>        
+        <section class="contact">
+            <Contact/>
+        </section>           
     </div>
 </template>
 
 <script>
-import Carousel from './components/Carousel.vue'
+import Description from './description/Description.vue'
+import Carousel from './carousel/Carousel.vue'
+import Contact from './contact/Contact.vue'
 export default {
     components: {
-        Carousel
+        Description,
+        Carousel,
+        Contact,
     }
 }
 </script>
-
-<style scoped>
-.briefing-text {
-    width: 90vw;
-    height: 40vh;
-}
-</style>
