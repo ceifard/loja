@@ -1,10 +1,7 @@
 <template>
     <v-toolbar dark color="primary">
 
-      <v-toolbar-title class="white--text font-weight-thin display-1 condensed">
-      <v-avatar :size="30" class="avatar-lookafter">
-        <img src="@/../static/img/avatar/diapers.png" alt="avatar">
-      </v-avatar>        
+      <v-toolbar-title class="white--text font-weight-light display-1 condensed">
         Look After&trade;
       </v-toolbar-title>
 
