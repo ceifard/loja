@@ -10,7 +10,7 @@
       <v-toolbar-items>
         <v-btn @click="$emit('onSignin');" flat>Login</v-btn>
         <v-btn @click="$emit('onSignup');" flat>Sign Up</v-btn>
-        <v-btn flat>About Us</v-btn>
+        <v-btn @click="$vuetify.goTo('#contact')" flat>Contact Us</v-btn>
       </v-toolbar-items>
 
     </v-toolbar>

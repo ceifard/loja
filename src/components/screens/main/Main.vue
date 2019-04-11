@@ -6,7 +6,7 @@
         <section>
             <Carousel/>
         </section>        
-        <section>
+        <section id="contact">
             <Contact/>
         </section>  
         <section>
