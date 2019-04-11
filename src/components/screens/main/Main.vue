@@ -1,12 +1,12 @@
 <template>
     <div>
-        <section class="description">
+        <section>
             <Description/>
         </section>     
-        <section class="carousel">
+        <section>
             <Carousel/>
         </section>        
-        <section class="contact">
+        <section>
             <Contact/>
         </section>           
     </div>

@@ -2,7 +2,7 @@
     <v-container text-xs-center>
         <v-layout row wrap>
             <v-flex xs12 md12>
-                <h2 class="headline my-3"><v-icon large color="black">shopping_cart</v-icon> Our Products</h2>
+                <h2 class="display-1 my-3"><v-icon x-large color="black">shopping_cart</v-icon> Our Products</h2>
             </v-flex>
             <v-flex>
                 <v-carousel interval="2000" max="300">
@@ -32,7 +32,7 @@ export default {
                 src: require('@/../static/img/carousel/diaper2.jpg')
             },
             {
-                src: require('@/../static/img/carousel/diaper3.jpg')
+                src: require('@/../static/img/carousel/diaper3.jpeg')
             },
             {
                 src: require('@/../static/img/carousel/diaper4.jpg')
@@ -47,7 +47,7 @@ export default {
                 src: require('@/../static/img/carousel/diaper7.jpg')
             },
             {
-                src: require('@/../static/img/carousel/diaper8.jpg')
+                src: require('@/../static/img/carousel/diaper8.jpeg')
             }
             ]            
         }
