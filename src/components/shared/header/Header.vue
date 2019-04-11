@@ -8,8 +8,8 @@
       <v-spacer></v-spacer>
 
       <v-toolbar-items>
-        <v-btn flat>Login</v-btn>
-        <v-btn flat>Sign Up</v-btn>
+        <v-btn @click="$emit('onSignin');" flat>Login</v-btn>
+        <v-btn @click="$emit('onSignup');" flat>Sign Up</v-btn>
         <v-btn flat>About Us</v-btn>
       </v-toolbar-items>
 

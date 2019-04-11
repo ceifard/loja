@@ -2,7 +2,7 @@
   <v-app>
 
     <header>
-      <Header/>
+      <Header @onSignup="showSignupDialog()" @onSignin="showSigninDialog()"/>
     </header>
 
     <main>
@@ -22,6 +22,14 @@ export default {
   name: 'App',
   components: {
     Header
+  },
+  methods: {
+    showSignupDialog() {
+      this.$store.commit('signup/dialogShowing', true)
+    },    
+    showSigninDialog() {
+      this.$store.commit('signin/dialogShowing', true)
+    },
   }
 }
 </script>
