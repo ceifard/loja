@@ -1,15 +1,17 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-import signup from './modules/signup'
-import signin from './modules/signin'
+import signup from './modules/frontend/signup'
+import signin from './modules/frontend/signin'
+
+import users from './modules/backend/users'
 
 Vue.use(Vuex)
 
 const state = {
   loading: false,
   message: {type: '', text: ''},
-  userLogged: {}
+  userLogged: null
 }
 
 const getters = {
@@ -36,6 +38,7 @@ export default new Vuex.Store({
     mutations,
     modules: {
         signup,
-        signin
+        signin,
+        users
     }
   })

@@ -78,7 +78,7 @@
         if (!this.$refs.form.validate()) {
           return false
         }        
-        console.log('Signing Up')
+        console.log('Signing In')
         this.closeModal();
       }
     }

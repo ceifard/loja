@@ -11,7 +11,7 @@
         class="black--text"
         >
             <h3 class="display-3">Be welcome to our website,</h3>   
-            <span class="subheading pl-1"> here you will find the best products for your need! We have the best quality for the best price.</span>
+            <span class="headline pl-1"> here you will find the best products for your need! We have the best quality for the best price.</span>
  
         </v-layout>
     </v-parallax>   

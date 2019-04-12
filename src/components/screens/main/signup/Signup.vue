@@ -52,8 +52,14 @@
 
           <v-card-actions>
             <v-spacer></v-spacer>
-            <v-btn color="secondary" @click="closeModal()"><v-icon>close</v-icon> Close</v-btn>
-            <v-btn color="secondary" @click="signUp()"><v-icon class="mr-2 my-1">send</v-icon> Send</v-btn>
+            <v-btn color="secondary" :disabled="$store.getters.loading" @click="closeModal()"><v-icon>close</v-icon> Close</v-btn>
+            <v-btn color="secondary" :disabled="$store.getters.loading" @click="signUp()"><v-icon class="mr-2 my-1">send</v-icon> Send</v-btn>
+            <v-progress-circular
+              indeterminate
+              color="primary"
+              class="mx-2"
+              v-if="$store.getters.loading"
+            ></v-progress-circular>            
           </v-card-actions>
         </v-form>
       </v-card>
@@ -100,9 +106,14 @@
       signUp() {
         if (!this.$refs.form.validate()) {
           return false
-        }        
-        console.log('Signing Up')
-        this.closeModal();
+        }   
+        this.$store.commit('loading', true)
+        this.$store.dispatch('signup/signUp').then( user => {
+          this.$store.commit('userLogged', user);
+          this.$store.commit('loading', false);
+          console.log('cadastrado');
+          this.closeModal();
+        })             
       }
     }
   }
