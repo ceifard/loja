@@ -14,26 +14,30 @@
             <v-container grid-list-md>
               <v-layout wrap>
                 <v-flex xs12 sm6 md12>
-                  <v-text-field label="Full name*"
+                  <v-text-field prepend-icon="person"
+                                label="Full name*"
                                 :rules="nameRules" 
                                 v-model="userName">
                   </v-text-field>
                 </v-flex>
                 <v-flex xs12>
-                  <v-text-field label="Email*" 
+                  <v-text-field prepend-icon="mail"
+                                label="Email*" 
                                 :rules="emailRules" 
                                 v-model="email">
                   </v-text-field>
                 </v-flex>
                 <v-flex xs12>
-                  <v-text-field label="Phone*" 
+                  <v-text-field prepend-icon="phone"
+                                label="Phone*" 
                                 :rules="phoneRules" 
                                 v-model="phone" 
                                 mask="(###) ###-###">
                   </v-text-field>
                 </v-flex>              
                 <v-flex xs12>
-                  <v-text-field label="Password*" 
+                  <v-text-field prepend-icon="lock"
+                                label="Password*" 
                                 :rules="passwordRules" 
                                 v-model="password" 
                                 type="password" 
@@ -48,8 +52,8 @@
 
           <v-card-actions>
             <v-spacer></v-spacer>
-            <v-btn color="blue darken-1" flat @click="closeModal()">Close</v-btn>
-            <v-btn color="blue darken-1" flat @click="signUp()">Send</v-btn>
+            <v-btn color="secondary" @click="closeModal()"><v-icon>close</v-icon> Close</v-btn>
+            <v-btn color="secondary" @click="signUp()"><v-icon class="mr-2 my-1">send</v-icon> Send</v-btn>
           </v-card-actions>
         </v-form>
       </v-card>
