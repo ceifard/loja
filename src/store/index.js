@@ -7,22 +7,27 @@ import signin from './modules/signin'
 Vue.use(Vuex)
 
 const state = {
-  carregando: false,
-  mensagem: {tipo: '', texto: ''},
+  loading: false,
+  message: {type: '', text: ''},
+  userLogged: {}
 }
 
 const getters = {
-  carregando: state => state.carregando,
-  mensagem: state => state.mensagem,
+  loading: state => state.loading,
+  message: state => state.message,
+  userLogged: state => state.userLogged,
 }
 
 const mutations = { 
-  carregando(state, obj) {
-      state.carregando = obj;
+  loading(state, obj) {
+      state.loading = obj;
   },
-  mensagem(state, obj) {
-      state.mensagem = obj;
-  },           
+  message(state, obj) {
+      state.message = obj;
+  }, 
+  userLogged(state, obj) {
+    state.userLogged = obj;
+  },              
 }
 
 export default new Vuex.Store({

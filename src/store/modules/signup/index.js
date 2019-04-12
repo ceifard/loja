@@ -4,10 +4,12 @@ import * as actions from './actions'
 
 const state = {
     dialogShowing: false,
-    userName: '',
-    email: '',
-    phone: '',
-    password: '',
+    user: {
+        userName: '',
+        email: '',
+        phone: '',
+        password: '',        
+    }
 }
 
 export default {

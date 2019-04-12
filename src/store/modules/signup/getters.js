@@ -1,5 +1,6 @@
 export const dialogShowing = (state) => state.dialogShowing
-export const userName = (state) => state.userName
-export const email = (state) => state.email
-export const phone = (state) => state.phone
-export const password = (state) => state.password
+export const user = (state) => state.user
+export const userName = (state) => state.user.userName
+export const email = (state) => state.user.email
+export const phone = (state) => state.user.phone
+export const password = (state) => state.user.password
