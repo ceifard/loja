@@ -28,7 +28,7 @@
             height: calc(100vh - 48px);
         }
     }  
-    @media only screen and (max-width: 959px)
+    @media only screen and (max-width: 636px)
     {
         .imageUnavailable {
             height: calc(100vh - 56px);

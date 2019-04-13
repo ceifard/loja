@@ -6,6 +6,7 @@
         @onSignup="showSignupDialog()" 
         @onLogin="showLoginDialog()"
         @onLogoff="logoff()"
+        @onScroll="scroll()"
         :user="this.$store.getters.userLogged"
       />
     </header>
@@ -29,11 +30,21 @@ export default {
     Header
   },
   methods: {
+    closeDialogs() {
+      this.$store.commit('login/dialogShowing', false)
+      this.$store.commit('signup/dialogShowing', false)      
+    },
     showSignupDialog() {
+      this.closeDialogs();
       this.$store.commit('signup/dialogShowing', true)
     },    
     showLoginDialog() {
+      this.closeDialogs();
       this.$store.commit('login/dialogShowing', true)
+    },
+    scroll() {
+      this.closeDialogs();
+      this.$vuetify.goTo('#contact');
     },
     logoff() {
       this.$store.commit('userLogged', null);

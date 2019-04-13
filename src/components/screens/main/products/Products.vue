@@ -17,8 +17,8 @@
                         </v-carousel-item>
                     </v-carousel>                  
                 </v-flex>
-                <v-flex xs12 md12>
-                    <span class="headline font-weight-light my-3">
+                <v-flex xs12 md12 my-5>
+                    <span class="headline font-weight-light">
                         Did you like any product? 
                         <span class="font-weight-bold loginRedirect" @click="$store.commit('login/dialogShowing', true)">log in</span> 
                         or 
@@ -68,7 +68,7 @@ export default {
 
 <style scoped>
 .container {
-    height: 100vh;
+    min-height: 100vh;
 }
 .registerRedirect, .loginRedirect {
     cursor: pointer;
