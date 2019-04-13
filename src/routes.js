@@ -1,5 +1,3 @@
-import Main from './components/screens/main/Main.vue';
-
 export const routes = [
     {
         path: '*',
@@ -9,5 +7,10 @@ export const routes = [
         path: '/',
         name: "root",
         component: () => import('./components/screens/main/Main.vue')
-    },  
+    },
+    {
+        path: '/unavailable',
+        name: "unavailable",
+        component: () => import('./components/screens/unavailable/Unavailable.vue')
+    },        
 ]

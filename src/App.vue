@@ -2,7 +2,12 @@
   <v-app>
 
     <header>
-      <Header @onSignup="showSignupDialog()" @onSignin="showSigninDialog()"/>
+      <Header 
+        @onSignup="showSignupDialog()" 
+        @onSignin="showSigninDialog()"
+        @onLogoff="logoff()"
+        :user="this.$store.getters.userLogged"
+      />
     </header>
 
     <main>
@@ -30,13 +35,18 @@ export default {
     showSigninDialog() {
       this.$store.commit('signin/dialogShowing', true)
     },
+    logoff() {
+      this.$store.commit('userLogged', null);
+      this.$router.push('/');
+    }
   }
 }
 </script>
 
 <style lang="scss">
-  body {
+  html, body {
     background: #ccc;
+    overflow: inherit;
   }
 </style>
 
