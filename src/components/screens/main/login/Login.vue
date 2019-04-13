@@ -1,5 +1,5 @@
 <template>
-  <v-layout row justify-center v-if="dialogShowing">
+  <v-layout row justify-center>
     <v-dialog v-model="dialogShowing" persistent max-width="600px">
       <v-card>
 

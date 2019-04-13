@@ -10,8 +10,8 @@
       <v-layout v-if="user" fill-height align-center>
         
         <v-layout column align-end="">
-          <span class="caption mx-3 font-weight-bold font-italic"> User: {{user.userName}}</span>
-          <span class="caption mx-3 font-weight-bold font-italic"> Registered at: {{user.createdAt}}</span>        
+          <span class="caption mx-3"> User: {{user.userName}}</span>
+          <span class="caption mx-3"> Registered at: {{user.createdAt}}</span>        
         </v-layout>
 
         <v-divider vertical dark></v-divider>

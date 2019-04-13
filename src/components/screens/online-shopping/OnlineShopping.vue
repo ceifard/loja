@@ -2,7 +2,7 @@
     <v-layout column>
         <div class="imageUnavailable">
             <div class="textImage">
-                <h3 class="display-1 font-weight-light">Online shopping will be avaliable soon</h3>
+                <h3 class="display-1 font-weight-light white--text">Online shopping will be avaliable soon</h3>
             </div>
         </div>
     </v-layout>            
