@@ -1,4 +1,6 @@
 export const signUp = ({getters, dispatch}) => {
     //adding user in the "backend"
-    return dispatch('users/addUser', {...getters.user}, {root:true})
+    let user = {...getters.user};
+    user.createdAt = new Date().toLocaleDateString()
+    return dispatch('users/addUser', user, {root:true})
 }

@@ -8,7 +8,8 @@ const state = {
         userName: '',
         email: '',
         phone: '',
-        password: '',        
+        password: '', 
+        createdAt: '',       
     }
 }
 

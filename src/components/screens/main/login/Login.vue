@@ -100,7 +100,6 @@
       closeModal() {
         //clean the user, using the raw copy stored on created
         this.user = {...this.userRaw}
-        console.log(this.user)
         this.dialogShowing = false
       },
       login() {
@@ -109,7 +108,6 @@
         } 
         this.$store.commit('loading', true)       
         this.$store.dispatch('login/login').then( user => {
-          console.log(user)
           if(user) {
             this.$store.commit('userLogged', user);
             this.$store.commit('loading', false);
@@ -118,7 +116,7 @@
               this.closeModal();    
               this.$store.commit('message', {type: '', text: ''});  
               this.$router.push('/onlineshopping');            
-            }, 4000);             
+            }, 2000);             
           } else {
             this.$store.commit('loading', false);
             this.$store.commit('message', {type: 'error', text: 'Invalid email/password'});

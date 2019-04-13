@@ -21,3 +21,7 @@ export function phone (state, value) {
 export function password (state, value) {
     state.user.password = value
 }
+
+export function createdAt (state, value) {
+    state.user.createdAt = value
+}
