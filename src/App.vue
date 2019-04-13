@@ -4,7 +4,7 @@
     <header>
       <Header 
         @onSignup="showSignupDialog()" 
-        @onSignin="showSigninDialog()"
+        @onLogin="showLoginDialog()"
         @onLogoff="logoff()"
         :user="this.$store.getters.userLogged"
       />
@@ -32,8 +32,8 @@ export default {
     showSignupDialog() {
       this.$store.commit('signup/dialogShowing', true)
     },    
-    showSigninDialog() {
-      this.$store.commit('signin/dialogShowing', true)
+    showLoginDialog() {
+      this.$store.commit('login/dialogShowing', true)
     },
     logoff() {
       this.$store.commit('userLogged', null);

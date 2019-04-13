@@ -13,7 +13,7 @@
       </v-toolbar-items>
 
       <v-toolbar-items v-else>
-        <v-btn @click="$emit('onSignin')" flat>Login</v-btn>
+        <v-btn @click="$emit('onLogin')" flat>Login</v-btn>
         <v-btn @click="$emit('onSignup')" flat>Create User</v-btn>
         <v-btn @click="$vuetify.goTo('#contact')" flat>Contact Us</v-btn>
       </v-toolbar-items>      

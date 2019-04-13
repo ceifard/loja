@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 
 import signup from './modules/frontend/signup'
-import signin from './modules/frontend/signin'
+import login from './modules/frontend/login'
 
 import users from './modules/backend/users'
 
@@ -38,7 +38,7 @@ export default new Vuex.Store({
     mutations,
     modules: {
         signup,
-        signin,
+        login,
         users
     }
   })

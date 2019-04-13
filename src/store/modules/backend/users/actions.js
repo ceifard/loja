@@ -7,3 +7,14 @@ export const addUser = ({commit}, user) => {
         }, 1500);       
     })
 }
+
+export const login = ({getters}, user) => {
+    return new Promise( (resolve) => {
+        setTimeout(() => {
+            let userFound = getters.users.find( existingUser => {
+                return (existingUser.email == user.email && existingUser.password == user.password)
+            } )
+            resolve(userFound || false);
+        }, 1500);       
+    })
+}

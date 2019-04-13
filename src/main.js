@@ -26,13 +26,13 @@ new Vue({
   render: function (h) { return h(App) },
 }).$mount('#app')
 
-router.beforeEach((to, from, next) => {
-  const requiresAuth = to.matched.some(x => x.meta.requiresAuth) //checa se, na rota que estamos sendo direcionados, há o meta "requiresAuth" setado nas rotas de routes.js
-  const currentUser = store.getters.userLogged  //checa se tem usuario logado, se tiver retorna o usuario, se nao tiver retorna null
+router.beforeResolve((to, from, next) => {
+  const requiresAuth = to.matched.some(x => x.meta.requiresAuth) //check if, in the route that we're being redirected, contains the meta "requiresAuth" setted on routes of routes.js
+  const currentUser = store.getters.userLogged  //check if there's a logged user. If true, returns the user. Else, returns null.
 
-  if (requiresAuth && !currentUser) {  //se a rota que estamos navegando requer autenticação e nao há usuário logado, redirecionamos para a pagina principal
+  if (requiresAuth && !currentUser) { //if the route that we are navigating requires authentication and there's no user logged, redirect to main page
       next('root') 
-  } else { //senão, deixamos a navegação prosseguir
+  } else { //else, proceed with navigation
       next()
   }
 

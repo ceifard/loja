@@ -6,16 +6,8 @@ export function user (state, value) {
     state.user = value
 }
 
-export function userName (state, value) {
-    state.user.userName = value
-}
-
 export function email (state, value) {
     state.user.email = value
-}
-
-export function phone (state, value) {
-    state.user.phone = value
 }
 
 export function password (state, value) {

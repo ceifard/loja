@@ -5,9 +5,7 @@ import * as actions from './actions'
 const state = {
     dialogShowing: false,
     user: {
-        userName: '',
         email: '',
-        phone: '',
         password: '',        
     }
 }
