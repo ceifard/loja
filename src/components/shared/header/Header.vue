@@ -47,6 +47,14 @@
       class = "drawer"
     >
 
+     <v-layout column justify-center align-center class="py-3" v-if="user">
+       <v-icon large>person_pin</v-icon>
+       <h3>{{user.userName}}</h3>
+     </v-layout>
+    
+
+    <v-divider></v-divider>
+
     <v-list dense class="pt-0" v-if="user">
       <v-list-tile
       @click="$emit('onLogoff'); drawer=false"
