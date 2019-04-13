@@ -111,8 +111,7 @@
         this.$store.dispatch('signup/signUp').then( user => {
           this.$store.commit('userLogged', user);
           this.$store.commit('loading', false);
-          this.$router.push('/unavailable');
-          console.log('cadastrado');
+          this.$router.push('/onlineshopping');
           this.closeModal();
         })             
       }

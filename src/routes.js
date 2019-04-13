@@ -9,8 +9,11 @@ export const routes = [
         component: () => import('./components/screens/main/Main.vue')
     },
     {
-        path: '/unavailable',
-        name: "unavailable",
-        component: () => import('./components/screens/unavailable/Unavailable.vue')
+        path: '/onlineshopping',
+        name: "onlineshopping",
+        component: () => import('./components/screens/online-shopping/OnlineShopping.vue'),
+        meta: {
+            requiresAuth: true
+        }              
     },        
 ]
