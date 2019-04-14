@@ -120,7 +120,7 @@ export default {
                 this.imagesBySize = this.images.map( (e,i) => { 
                     return i%this.perSlide===0 ? this.images.slice(i,i+this.perSlide) : null; 
                 }).filter(e => e);   
-            }, 20);
+            }, 150);
         },      
     } 
 }
