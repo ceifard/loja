@@ -1,5 +1,5 @@
 <template>
-    <v-container text-xs-center class="container">
+    <!-- <v-container text-xs-center class="container">
         <v-layout justify-center fill-height>
             <v-layout row wrap>
                 <v-flex xs12 md12>
@@ -28,38 +28,39 @@
                 </v-flex>                
             </v-layout>
         </v-layout>
-    </v-container>    
+    </v-container> -->
+
+    <v-container text-xs-center class="container">
+        <v-layout justify-center fill-height>
+            <v-layout column fill-height>
+                <Carousel>
+                    <CarouselSlide v-for="(img, i) in images" :key="i">
+                        <v-img :src="img.src"></v-img>
+                    </CarouselSlide>               
+                </Carousel>
+            </v-layout>
+        </v-layout>
+    </v-container>         
 </template>
 
 <script>
+import Carousel from './carousel/Carousel'
+import CarouselSlide from './carousel/CarouselSlide'
+
 export default {
+    components: {Carousel, CarouselSlide},
     data() {
         return {
-            items: [
+            images: [
             {
-                src: require('@/../static/img/carousel/diaper1.jpg') 
+                src: 'https://source.unsplash.com/TMOeGZw9NY4/1600x900'
             },                
             {
-                src: require('@/../static/img/carousel/diaper2.jpg')
+                src: 'https://source.unsplash.com/BeOW_PJjA0w/1600x900'
             },
-            {
-                src: require('@/../static/img/carousel/diaper3.jpeg')
-            },
-            {
-                src: require('@/../static/img/carousel/diaper4.jpg')
-            },                
-            {
-                src: require('@/../static/img/carousel/diaper5.jpg')
-            },
-            {
-                src: require('@/../static/img/carousel/diaper6.jpg')
-            },
-            {
-                src: require('@/../static/img/carousel/diaper7.jpg')
-            },
-            {
-                src: require('@/../static/img/carousel/diaper8.jpeg')
-            }
+            // {
+            //     src: require('@/../static/img/carousel/diaper3.jpeg')
+            // },
             ]            
         }
     },   

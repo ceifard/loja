@@ -27,7 +27,6 @@ export default {
     computed: {
         viewportHeight() {
             let vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0) - 48
-            console.log(vh)
             return vh
         }
     }
