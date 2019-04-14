@@ -33,6 +33,9 @@
     <v-container text-xs-center class="container">
         <v-layout justify-center fill-height>
             <v-layout column fill-height>
+                <v-flex xs12 md12>
+                    <h2 class="display-1 font-weight-light my-3"><v-icon x-large class="mb-1" color="black">shopping_cart</v-icon> Our Products</h2>
+                </v-flex>                
                 <Carousel>
                     <CarouselSlide v-for="(img, i) in images" :key="i">
                         <v-img :src="img.src"></v-img>

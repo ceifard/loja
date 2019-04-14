@@ -106,5 +106,17 @@ export default {
                 }                
             }            
         }
-    } 
+    }
+
+    @media only screen and (max-width: 636px)
+    {
+        .carousel__nav {
+            width: 35px;
+            height: 38px;
+            img {
+            width: 35px;
+            height: 38px;                
+            }
+        }
+    }        
 </style>
