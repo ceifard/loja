@@ -1,5 +1,5 @@
 <template>
-    <div class="carousel">
+    <div class="carousel" @mouseenter="mouseEnter()" @mouseleave="mouseLeave()">
         <slot></slot>
         <button class="carousel__nav carousel__prev" @click.prevent="prev">
             <img :src="require('./img/prev.png')" alt="" width="50px">
@@ -23,7 +23,9 @@ export default {
         return {
             index: 0,
             slides: [],
-            direction: null
+            direction: null,
+            interval: 2000,
+            tempinho: ''
         }
     },
     mounted() {
@@ -32,6 +34,9 @@ export default {
         this.slides.forEach((slide, i) => {
             slide.index = i //set children component's property index
         })
+        this.timer = setInterval(() => {
+            this.next();
+        }, 2000);          
     },
     computed: {
         slidesCount() {
@@ -39,6 +44,14 @@ export default {
         }
     },
     methods: {
+        mouseEnter() {
+            clearInterval(this.timer);
+        },
+        mouseLeave() {
+            this.timer = setInterval(() => {
+                this.next();
+            }, 2000);            
+        },
         next() {
             this.index++
             this.direction = 'right'
