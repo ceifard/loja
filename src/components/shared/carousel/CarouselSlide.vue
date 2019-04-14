@@ -30,7 +30,7 @@ export default {
 <style lang="scss">
 
     .slide {
-        img {
+        * {
             max-width: 100%;
         }
         &-right {

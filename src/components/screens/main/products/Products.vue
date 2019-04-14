@@ -38,7 +38,7 @@
                 </v-flex>                
                 <Carousel>
                     <CarouselSlide v-for="(img, i) in images" :key="i">
-                        <v-img :src="img.src"></v-img>
+                        <v-img :src="img.src" height="400"></v-img>
                     </CarouselSlide>               
                 </Carousel>
                 <v-flex xs12 md12 my-5>
@@ -70,9 +70,9 @@ export default {
             {
                 src: 'https://source.unsplash.com/BeOW_PJjA0w/1600x900'
             },
-            // {
-            //     src: require('@/../static/img/carousel/diaper3.jpeg')
-            // },
+            {
+                src: require('@/../static/img/carousel/diaper3.jpeg')
+            },
             ]            
         }
     },   

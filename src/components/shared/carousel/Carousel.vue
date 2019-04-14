@@ -69,11 +69,12 @@ export default {
         flex-direction: column;
         flex: 1;
         color: white;
+        max-height: 100vh;
         &__nav {
             position: absolute;
-            top: 50%;
+            top: 46%;
             left: 10px;
-            width: 58px;
+            width: 60px;
             height: 60px;
             border: 1px solid #636363;
             background: #ccc;
@@ -111,10 +112,11 @@ export default {
     @media only screen and (max-width: 636px)
     {
         .carousel__nav {
-            width: 35px;
+            top: 50%;
+            width: 38px;
             height: 38px;
             img {
-            width: 35px;
+            width: 38px;
             height: 38px;                
             }
         }
