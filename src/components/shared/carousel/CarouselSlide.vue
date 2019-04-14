@@ -1,7 +1,6 @@
 <template>
     <transition :name="transition">
         <div v-show="visible" class="slide">
-            Index: {{ index }}
             <slot></slot>
         </div>    
     </transition>
