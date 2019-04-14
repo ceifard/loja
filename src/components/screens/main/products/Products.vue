@@ -15,6 +15,7 @@
                                     :src="img.src"
                                     aspect-ratio="1.75"
                                     class="mx-2"
+                                    contain
                                     ></v-img>
 
                                     <v-card-title primary-title>
@@ -136,6 +137,7 @@ export default {
     background: rgba(204, 204, 204, 0.521);
     &__img-container {
         padding: 50px 70px;
+        max-height: 100%;
     }
 }
 </style>

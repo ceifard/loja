@@ -123,10 +123,5 @@ export default {
 </script>
 
 <style scoped>
-.header {
-  z-index: 9;
-}
-.drawer {
-  z-index: 10;
-}
+
 </style>

@@ -13,7 +13,7 @@
           <v-card-text>
             <v-container grid-list-md>
               <v-layout wrap>
-                <v-flex xs12 sm6 md12>
+                <v-flex xs12>
                   <v-text-field prepend-icon="person"
                                 label="Full name*"
                                 :rules="nameRules" 

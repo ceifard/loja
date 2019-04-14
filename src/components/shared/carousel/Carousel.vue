@@ -82,7 +82,6 @@ export default {
         flex-direction: column;
         flex: 1;
         color: white;
-        max-height: 100vh;
         &__nav {
             position: absolute;
             top: 46%;

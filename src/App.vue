@@ -58,6 +58,7 @@ export default {
   html, body {
     background: #ccc;
     overflow: inherit;
+    max-width: 100vw;
   }
 </style>
 
