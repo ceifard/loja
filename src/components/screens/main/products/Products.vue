@@ -41,14 +41,23 @@
                         <v-img :src="img.src"></v-img>
                     </CarouselSlide>               
                 </Carousel>
+                <v-flex xs12 md12 my-5>
+                    <span class="headline font-weight-light">
+                        Did you like any product? 
+                        <span class="font-weight-bold loginRedirect" @click="$store.commit('login/dialogShowing', true)">log in</span> 
+                        or 
+                        <span class="font-weight-bold registerRedirect" @click="$store.commit('signup/dialogShowing', true)">register</span> 
+                        to make your first purchase!
+                    </span>
+                </v-flex>                   
             </v-layout>
         </v-layout>
     </v-container>         
 </template>
 
 <script>
-import Carousel from './carousel/Carousel'
-import CarouselSlide from './carousel/CarouselSlide'
+import Carousel from '../../../shared/carousel/Carousel'
+import CarouselSlide from '../../../shared/carousel/CarouselSlide'
 
 export default {
     components: {Carousel, CarouselSlide},
