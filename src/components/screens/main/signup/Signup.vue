@@ -44,6 +44,15 @@
                                 autocomplete="new-password">
                   </v-text-field>
                 </v-flex>
+                <v-flex xs12 v-if="!!message.text">
+                  <v-alert
+                    :value="true"
+                    :type="message.type"
+                    transition="fade-transition"
+                  >
+                    {{message.text}}
+                  </v-alert>
+                </v-flex>                 
               </v-layout>
             </v-container>
           </v-card-text>
@@ -97,6 +106,16 @@
       }
     },
     mixins: [ModelSignup],   
+    computed: {
+      message: {
+        get() {
+          return this.$store.getters.message
+        },
+        set(value) {
+          this.$store.commit('message', value);
+        }
+      },      
+    },
     methods: {
       closeModal() {
         //clean the user, using the raw copy stored on created
@@ -109,10 +128,18 @@
         }   
         this.$store.commit('loading', true)
         this.$store.dispatch('signup/signUp').then( user => {
-          this.$store.commit('userLogged', user);
-          this.$store.commit('loading', false);
-          this.$router.push('/onlineshopping');
-          this.closeModal();
+          if(user) {
+            this.$store.commit('userLogged', user);
+            this.$store.commit('loading', false);
+            this.$router.push('/onlineshopping');
+            this.closeModal();
+          } else {
+            this.$store.commit('loading', false);
+            this.$store.commit('message', {type: 'error', text: 'This user already exists'});
+            setTimeout(() => {
+              this.$store.commit('message', {type: '', text: ''});              
+            }, 4000);
+          }
         })             
       }
     }

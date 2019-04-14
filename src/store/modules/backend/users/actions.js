@@ -1,9 +1,16 @@
-export const addUser = ({commit}, user) => {
+export const addUser = ({getters, commit}, user) => {
     return new Promise( (resolve) => {
         setTimeout(() => {
-            user['id'] = Math.floor(Math.random() * 20000000000000000)
-            commit('addUser', user);
-            resolve(user);
+            let userFound = getters.users.find( existingUser => {
+                return (existingUser.email == user.email)
+            } )     
+            if(userFound) {
+                resolve(false);
+            } else {
+                user['id'] = Math.floor(Math.random() * 20000000000000000)
+                commit('addUser', user);
+                resolve(user);
+            }
         }, 1500);       
     })
 }
